@@ -78,20 +78,32 @@ navigation">
             </ul>
         </div>
     </nav>
-
-    <!-- Incluindo jQuery e Bootstrap JS  -->
     <div class="container mt-5">
-        <div class="jumbotron text-center">
-            <h1 class="display-4">Olá, é bom te ver por aqui</h1>
-            <p class="lead">Esta é a página inicial do nosso Sistema Acadêmico</p>
-            <p class="lead">Seja Muito Bem Vindo(A)</p>
-        </div>
-    </div>
+        <h2 class="mb-4">Tabela de Instituicoes</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Instituicao</th>
+                    <th scope="col">Site</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">Cidade</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for instituicoes in instituicoes %}
+                <tr>
+                    <td>{{ instituicoes.nome }}</td>
+                    <td>{{ instituicoes.site }}</td>
+                    <td>{{ instituicoes.telefone }}</td>
+                    <td>{{ instituicoes.cidade }}</td>
+                </tr>
+                {% endfor %}
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popp
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popp
 er.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.mi
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.mi
 n.js"></script>
 </body>
 
